@@ -1,29 +1,30 @@
-#import csv
+import csv
 
-# part 1
-#with open('Input 2.csv') as data:
-#    reader = csv.reader(data, delimiter=" ") #delimiter = what separates values
+#part 1
 
-#   solutions= 0
-#    for row in reader:
-#        quantity, letter, password = row[0], row[1][0], row[2]
+with open('Input 2.csv') as data:
+    reader = csv.reader(data, delimiter=" ") #delimiter = what separates values
 
-#        print(quantity, letter,password)
+solutions= 0
+for row in reader:
+        quantity, letter, password = row[0], row[1][0], row[2]
+
+        print(quantity, letter,password)
 
 
-#        i = quantity.index('-')
-#        lower = int(quantity[:i])
-#        upper = int(quantity[i+1:])
+        i = quantity.index('-')
+        lower = int(quantity[:i])
+        upper = int(quantity[i+1:])
 
-#        count = 0 
-#        for character in password:
-#            if character == letter:
-#                count += 1
+        count = 0 
+        for character in password:
+            if character == letter:
+                count += 1
 
-#       if count >= lower and count <= upper:
-#            solutions += 1
+if count >= lower and count <= upper:
+            solutions += 1
 
-#print(solutions)
+print(solutions)
 
 
 
